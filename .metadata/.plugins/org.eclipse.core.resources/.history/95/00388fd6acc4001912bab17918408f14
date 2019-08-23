@@ -1,0 +1,27 @@
+package com.example.demo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.data.repository.CrudRepository;
+
+import com.example.demo.model.Catalog;
+import com.example.demo.service.CatalogService;
+
+@SpringBootApplication
+public class CassandraUsingRepoApplication {
+
+	public static void main(String[] args) {
+		ConfigurableApplicationContext ctx = SpringApplication.run(CassandraUsingRepoApplication.class, args);
+		
+		CatalogService service = ctx.getBean(CatalogService.class);
+		
+		
+		
+	}
+	
+	public Catalog catalog() {
+		
+		return new Catalog(904, 599, "Broadband");
+	}
+}

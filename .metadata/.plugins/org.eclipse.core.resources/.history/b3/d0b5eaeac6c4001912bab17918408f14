@@ -1,0 +1,13 @@
+package com.example.demo.service;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class LoanEligibility {
+
+	public double checkEligibility(double yearlyIncome, String employment) {
+		double allowedAmount = 100000.00;
+		
+		if(yearlyIncome < 100000 && employment.equalsIgnoreCase("business")))
+	}
+}
